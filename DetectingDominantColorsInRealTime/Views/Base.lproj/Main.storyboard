@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="DetectingDominantColorsInRealTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJz-fR-3Ac">
+                                <rect key="frame" x="0.0" y="59" width="852" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIs-Sh-oLi" customClass="LiveStreamCameraUIView" customModule="DetectingDominantColorsInRealTime" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="662.66666666666663" height="300"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfK-V8-nyq">
+                                        <rect key="frame" x="662.66666666666663" y="0.0" width="189.33333333333337" height="300"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="חלוקת צבעים" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4E-HS-R89">
+                                                <rect key="frame" x="0.0" y="0.0" width="189.33333333333334" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" red="0.97254925969999995" green="0.96470576519999995" blue="0.96862751250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="M6q-Tc-p3u">
+                                                <rect key="frame" x="10" y="30.333333333333346" width="169.33333333333334" height="259.66666666666669"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="z4E-HS-R89" firstAttribute="top" secondItem="pfK-V8-nyq" secondAttribute="top" id="0EQ-qB-ygw"/>
+                                            <constraint firstItem="z4E-HS-R89" firstAttribute="leading" secondItem="pfK-V8-nyq" secondAttribute="leading" id="TJ9-DR-T61"/>
+                                            <constraint firstAttribute="trailing" secondItem="z4E-HS-R89" secondAttribute="trailing" id="da4-Ry-UgG"/>
+                                            <constraint firstAttribute="trailing" secondItem="M6q-Tc-p3u" secondAttribute="trailing" constant="10" id="hGp-rK-m3i"/>
+                                            <constraint firstItem="M6q-Tc-p3u" firstAttribute="top" secondItem="z4E-HS-R89" secondAttribute="bottom" constant="10" id="owt-kl-svu"/>
+                                            <constraint firstAttribute="bottom" secondItem="M6q-Tc-p3u" secondAttribute="bottom" constant="10" id="sdY-Hl-RBo"/>
+                                            <constraint firstItem="M6q-Tc-p3u" firstAttribute="leading" secondItem="pfK-V8-nyq" secondAttribute="leading" constant="10" id="yt7-Hw-pc5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kIs-Sh-oLi" firstAttribute="width" secondItem="pfK-V8-nyq" secondAttribute="width" multiplier="2:1" id="XiK-4w-p1W"/>
+                                    <constraint firstItem="kIs-Sh-oLi" firstAttribute="width" secondItem="pfK-V8-nyq" secondAttribute="width" multiplier="3.5:1" id="cr7-nF-0cA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cr7-nF-0cA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="XiK-4w-p1W"/>
+                                        <include reference="cr7-nF-0cA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular">
+                                    <mask key="constraints">
+                                        <exclude reference="XiK-4w-p1W"/>
+                                        <include reference="cr7-nF-0cA"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CJz-fR-3Ac" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6fZ-kg-PAh"/>
+                            <constraint firstItem="CJz-fR-3Ac" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="77a-Wv-D1o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CJz-fR-3Ac" secondAttribute="bottom" id="GRQ-dI-dZP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CJz-fR-3Ac" secondAttribute="trailing" id="nSg-X0-nCf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="liveStreamCameraUIView" destination="kIs-Sh-oLi" id="9Pl-pE-fok"/>
+                        <outlet property="tableView" destination="M6q-Tc-p3u" id="aXc-U1-rbe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.577464788732399" y="100"/>
+        </scene>
+    </scenes>
+</document>
