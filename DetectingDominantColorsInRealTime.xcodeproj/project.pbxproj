@@ -450,7 +450,7 @@
 				DEVELOPMENT_TEAM = 5X8937C6QS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DetectingDominantColorsInRealTime/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "To get the popular colors live";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -479,7 +479,7 @@
 				DEVELOPMENT_TEAM = 5X8937C6QS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DetectingDominantColorsInRealTime/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "To get the popular colors live";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
