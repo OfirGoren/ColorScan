@@ -3,12 +3,12 @@ import AVFoundation
 
 
 /*
-  Sources: https://stackoverflow.com/questions/448125/how-to-get-pixel-data-from-a-uiimage-cocoa-touch-or-cgimage-core-graphics/60247648#60247648
+ Sources: https://stackoverflow.com/questions/448125/how-to-get-pixel-data-from-a-uiimage-cocoa-touch-or-cgimage-core-graphics/60247648#60247648
  
- explanation: I took the code because it was difficult to find how to calculate the color of a pixel
-
+ explanation: I took the code because it was difficult to find information how to calculate the color of a pixel
+ 
  */
-        
+
 
 
 extension UIImage {
@@ -31,7 +31,7 @@ extension UIImage {
     /// 0 - R color,
     /// 1 - G color,
     /// 2 - B color
- 
+    
     func pixelColor(x: Int, y: Int) -> Array<UInt8> {
         assert(
             0..<pixelWidth ~= x && 0..<pixelHeight ~= y,
@@ -135,7 +135,7 @@ extension UIImage {
         }
         return image
     }
-
+    
 }
 
 

@@ -4,6 +4,11 @@ import UIKit
 import AVFoundation
 class LiveStreamCameraUIView:UIView {
     
+    /*
+     Resource:
+     https://developer.apple.com/documentation/avfoundation/capture_setup/setting_up_a_capture_session
+     */
+    
     override class var layerClass: AnyClass {
         return AVCaptureVideoPreviewLayer.self
     }

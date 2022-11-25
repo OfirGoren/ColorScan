@@ -5,11 +5,11 @@ import AVFoundation
 
 class MainViewController: UIViewController {
     
-
+    
     @IBOutlet weak var tableView: UITableView!
-   
+    
     @IBOutlet weak var liveStreamCameraUIView: LiveStreamCameraUIView!
-    private var mostPopularColors = [DominantColor]()
+    private var mostDominantColorsList = [DominantColor]()
     
     
     override func viewDidLoad() {
@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
     func reloadFiveMostDominantColorsFromCameraToTableView() {
         LiveStreamCamera.shared.getMostFiveDominantColorsInImage { [weak self] fiveMostDominantColor in
             guard let self = self else {return }
-            self.mostPopularColors = fiveMostDominantColor
+            self.mostDominantColorsList = fiveMostDominantColor
             DispatchQueue.main.async {
                 
                 self.tableView.reloadData()
@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
         }
         
     }
-
+    
 }
 
 //MARK: Setup live Stream
@@ -94,27 +94,26 @@ extension MainViewController {
 }
 
 
-
 //MARK: TableView delegate methods
 extension MainViewController:UITableViewDelegate {
     
     
 }
 
+
 //MARK: TableView DataSource delegate methods
 extension MainViewController:UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mostPopularColors.count
+        return mostDominantColorsList.count
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: DominantColorCell.identifierCell, for: indexPath) as? DominantColorCell else {return UITableViewCell()}
         
-        let popularColor = mostPopularColors[indexPath.row]
+        let popularColor = mostDominantColorsList[indexPath.row]
         cell.setupData(color: popularColor)
-        
         
         return cell
         

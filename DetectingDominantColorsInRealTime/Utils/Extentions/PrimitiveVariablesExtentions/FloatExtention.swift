@@ -17,7 +17,7 @@ extension Float {
     }
     
     
-   
+    
     
     ///Append at the end of the string
     func AddPercentageToString()->String {

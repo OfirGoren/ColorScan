@@ -8,7 +8,6 @@ class DominantColorCell: UITableViewCell {
     @IBOutlet weak var RColorLabel: UILabel!
     @IBOutlet weak var GColorLabel: UILabel!
     @IBOutlet weak var BColorLabel: UILabel!
-    
     @IBOutlet weak var colorCoveragePercentageLabel: UILabel!
     @IBOutlet weak var backgroundColorUiView: UIView!
     
@@ -27,10 +26,10 @@ class DominantColorCell: UITableViewCell {
         RColorLabel.text = color.RGBcolor.RColor.toString()
         GColorLabel.text = color.RGBcolor.GColor.toString()
         BColorLabel.text = color.RGBcolor.BColor.toString()
-       
+        
         
         backgroundColorUiView.backgroundColor = UIColor(red: color.RGBcolor.RColor, green: color.RGBcolor.GColor, blue: color.RGBcolor.BColor)
-       
+        
         
         if let colorCoveragePercentage = color.colorCoveragePercentage {
             colorCoveragePercentageLabel.text = colorCoveragePercentage.AddPercentageToString()

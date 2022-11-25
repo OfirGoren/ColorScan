@@ -3,7 +3,7 @@
 /*
  Sources:
  
- 1) https://developer.apple.com/documentation/avfoundation/capture_setup/setting_up_a_capture_session
+ 1)https://developer.apple.com/documentation/avfoundation/capture_setup/setting_up_a_capture_session
  
  2)https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AVFoundationPG/Articles/04_MediaCapture.html#//apple_ref/doc/uid/TP40010188-CH5-SW14
  */

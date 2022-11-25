@@ -10,7 +10,7 @@ extension CMSampleBuffer {
         
         var liveImage = UIImage()
         let pixelBuffer = CMSampleBufferGetImageBuffer(self)
-       
+        
         guard let pixelBuffer = pixelBuffer else {return liveImage}
         
         let cameraImage = CIImage(cvPixelBuffer: pixelBuffer)
@@ -19,12 +19,12 @@ extension CMSampleBuffer {
         
         let imageRect = CGRect(x: 0, y: 0, width: CVPixelBufferGetWidth(pixelBuffer), height: CVPixelBufferGetHeight(pixelBuffer))
         
-            
+        
         if let image = context.createCGImage(cameraImage, from: imageRect, format: .RGBA8, colorSpace: CGColorSpaceCreateDeviceRGB()) {
             
             liveImage =  UIImage(cgImage: image, scale: UIScreen.main.scale, orientation: .down)
             
-
+            
         }
         
         return liveImage

@@ -22,7 +22,6 @@
 		664F7CEE292C105F002795D9 /* CMSampleBufferExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CED292C105F002795D9 /* CMSampleBufferExtention.swift */; };
 		664F7CF0292D0863002795D9 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CEF292D0863002795D9 /* RGBColor.swift */; };
 		664F7CF2292D0B76002795D9 /* FloatExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CF1292D0B76002795D9 /* FloatExtention.swift */; };
-		664F7CF4292D0E70002795D9 /* DictionaryExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CF3292D0E70002795D9 /* DictionaryExtention.swift */; };
 		664F7CF6292E2E2A002795D9 /* CGBitmapInfoExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CF5292E2E2A002795D9 /* CGBitmapInfoExtention.swift */; };
 		664F7CFD292E5749002795D9 /* DominantColorsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CFC292E5749002795D9 /* DominantColorsHelper.swift */; };
 		664F7CFF292F9A07002795D9 /* UInit8Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CFE292F9A07002795D9 /* UInit8Extention.swift */; };
@@ -47,7 +46,6 @@
 		664F7CED292C105F002795D9 /* CMSampleBufferExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSampleBufferExtention.swift; sourceTree = "<group>"; };
 		664F7CEF292D0863002795D9 /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
 		664F7CF1292D0B76002795D9 /* FloatExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtention.swift; sourceTree = "<group>"; };
-		664F7CF3292D0E70002795D9 /* DictionaryExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtention.swift; sourceTree = "<group>"; };
 		664F7CF5292E2E2A002795D9 /* CGBitmapInfoExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGBitmapInfoExtention.swift; sourceTree = "<group>"; };
 		664F7CFC292E5749002795D9 /* DominantColorsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantColorsHelper.swift; sourceTree = "<group>"; };
 		664F7CFE292F9A07002795D9 /* UInit8Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInit8Extention.swift; sourceTree = "<group>"; };
@@ -180,7 +178,6 @@
 		664F7CF8292E306D002795D9 /* CollectionsExtentions */ = {
 			isa = PBXGroup;
 			children = (
-				664F7CF3292D0E70002795D9 /* DictionaryExtention.swift */,
 			);
 			path = CollectionsExtentions;
 			sourceTree = "<group>";
@@ -294,7 +291,6 @@
 				664F7CBC292A63C2002795D9 /* AppDelegate.swift in Sources */,
 				664F7CE7292BBDB8002795D9 /* UIImageExtention.swift in Sources */,
 				664F7CFD292E5749002795D9 /* DominantColorsHelper.swift in Sources */,
-				664F7CF4292D0E70002795D9 /* DictionaryExtention.swift in Sources */,
 				664F7CF6292E2E2A002795D9 /* CGBitmapInfoExtention.swift in Sources */,
 				664F7CF0292D0863002795D9 /* RGBColor.swift in Sources */,
 				664F7D01292F9ACF002795D9 /* UIColorExtention.swift in Sources */,
