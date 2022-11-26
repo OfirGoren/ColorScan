@@ -80,7 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="liveStreamCameraUIView" destination="kIs-Sh-oLi" id="9Pl-pE-fok"/>
+                        <outlet property="liveCameraUIView" destination="kIs-Sh-oLi" id="9Pl-pE-fok"/>
                         <outlet property="tableView" destination="M6q-Tc-p3u" id="aXc-U1-rbe"/>
                     </connections>
                 </viewController>

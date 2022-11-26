@@ -8,7 +8,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var liveStreamCameraUIView: LiveCameraUIView!
+    @IBOutlet weak var liveCameraUIView: LiveCameraUIView!
     private var mostDominantColorsList = [DominantColor]()
     
     
@@ -49,8 +49,8 @@ extension MainViewController {
     
     func configureLiveStreamCamera() {
         
-        liveStreamCameraUIView.videoPreviewLayer.session = LiveCameraHandler.shared.captureSesstion
-        liveStreamCameraUIView.videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        liveCameraUIView.videoPreviewLayer.session = LiveCameraHandler.shared.captureSesstion
+        liveCameraUIView.videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         DispatchQueue.global(qos: .userInitiated).async {
             LiveCameraHandler.shared.captureSesstion.startRunning()
         }
@@ -60,14 +60,14 @@ extension MainViewController {
     func rotateLiveStreamAccordingOrientation() {
         if UIDevice.current.orientation.isLandscape {
             if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft{
-                liveStreamCameraUIView.videoPreviewLayer.connection?.videoOrientation = .landscapeRight
+                liveCameraUIView.videoPreviewLayer.connection?.videoOrientation = .landscapeRight
             }
             else if UIDevice.current.orientation == UIDeviceOrientation.landscapeRight{
-                liveStreamCameraUIView.videoPreviewLayer.connection?.videoOrientation = .landscapeLeft
+                liveCameraUIView.videoPreviewLayer.connection?.videoOrientation = .landscapeLeft
                 
             }
         } else if UIDevice.current.orientation.isPortrait {
-            liveStreamCameraUIView.videoPreviewLayer.connection?.videoOrientation = .portrait
+            liveCameraUIView.videoPreviewLayer.connection?.videoOrientation = .portrait
             
         } else if UIDevice.current.orientation.isValidInterfaceOrientation {
             
