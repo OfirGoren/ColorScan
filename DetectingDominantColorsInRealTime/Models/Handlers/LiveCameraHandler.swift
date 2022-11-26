@@ -12,17 +12,17 @@ import Foundation
 import AVFoundation
 import UIKit
 
-class LiveStreamCamera:NSObject {
+class LiveCameraHandler:NSObject {
     
-    typealias FiveMostDominantColorsClousre = (([DominantColor])->Void)
+    typealias MostDominantColorsClousre = (([DominantColor])->Void)
     
-    static let shared = LiveStreamCamera()
+    static let shared = LiveCameraHandler()
     
     let captureSesstion = AVCaptureSession()
     private let dataOutput = AVCaptureVideoDataOutput()
     private let queue = DispatchQueue(label: "capture")
     private var videoDevice: AVCaptureDevice?
-    private var fiveMostDominantColorsCallBack:FiveMostDominantColorsClousre?
+    private var fiveMostDominantColorsCallBack:MostDominantColorsClousre?
     
     
     private override init() {
@@ -79,7 +79,7 @@ class LiveStreamCamera:NSObject {
     }
     
     
-    func getMostFiveDominantColorsInImage(completion: @escaping FiveMostDominantColorsClousre) {
+    func getMostFiveDominantColorsInImage(completion: @escaping MostDominantColorsClousre) {
         fiveMostDominantColorsCallBack = completion
         
     }
@@ -87,16 +87,16 @@ class LiveStreamCamera:NSObject {
 }
 
 // MARK: SampleBufferDelegate methods
-extension LiveStreamCamera:AVCaptureVideoDataOutputSampleBufferDelegate {
+extension LiveCameraHandler:AVCaptureVideoDataOutputSampleBufferDelegate {
     
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
         var liveImage = sampleBuffer.convertToUImage()
         liveImage = liveImage.renderResizedImage(newWidth: CGFloat(50))
-        let fiveMostPopularColor = DominantColorsHelper.getFiveMostDominantColorsInImage(for: liveImage)
+        let fiveMostDominantColor = DominantColorsHelper.getFiveMostDominantColorsInImage(for: liveImage)
         
         if let fiveMostDominantColorsCallBack {
-            fiveMostDominantColorsCallBack(fiveMostPopularColor)
+            fiveMostDominantColorsCallBack(fiveMostDominantColor)
             
         }
     }

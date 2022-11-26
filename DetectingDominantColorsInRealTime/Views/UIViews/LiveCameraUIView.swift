@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 import AVFoundation
-class LiveStreamCameraUIView:UIView {
+class LiveCameraUIView:UIView {
     
     /*
      Resource:

@@ -16,8 +16,8 @@
 		664F7CD8292A6BE6002795D9 /* DominantColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CD6292A6BE6002795D9 /* DominantColorCell.swift */; };
 		664F7CD9292A6BE6002795D9 /* DominantColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 664F7CD7292A6BE6002795D9 /* DominantColorCell.xib */; };
 		664F7CDF292A74FB002795D9 /* DominantColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CDE292A74FB002795D9 /* DominantColor.swift */; };
-		664F7CE2292A8568002795D9 /* LiveStreamCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CE1292A8568002795D9 /* LiveStreamCamera.swift */; };
-		664F7CE5292AB197002795D9 /* LiveStreamCameraUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CE4292AB197002795D9 /* LiveStreamCameraUIView.swift */; };
+		664F7CE2292A8568002795D9 /* LiveCameraHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CE1292A8568002795D9 /* LiveCameraHandler.swift */; };
+		664F7CE5292AB197002795D9 /* LiveCameraUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CE4292AB197002795D9 /* LiveCameraUIView.swift */; };
 		664F7CE7292BBDB8002795D9 /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CE6292BBDB8002795D9 /* UIImageExtention.swift */; };
 		664F7CEE292C105F002795D9 /* CMSampleBufferExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CED292C105F002795D9 /* CMSampleBufferExtention.swift */; };
 		664F7CF0292D0863002795D9 /* RGBColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664F7CEF292D0863002795D9 /* RGBColor.swift */; };
@@ -40,8 +40,8 @@
 		664F7CD6292A6BE6002795D9 /* DominantColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantColorCell.swift; sourceTree = "<group>"; };
 		664F7CD7292A6BE6002795D9 /* DominantColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DominantColorCell.xib; sourceTree = "<group>"; };
 		664F7CDE292A74FB002795D9 /* DominantColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DominantColor.swift; sourceTree = "<group>"; };
-		664F7CE1292A8568002795D9 /* LiveStreamCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamCamera.swift; sourceTree = "<group>"; };
-		664F7CE4292AB197002795D9 /* LiveStreamCameraUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamCameraUIView.swift; sourceTree = "<group>"; };
+		664F7CE1292A8568002795D9 /* LiveCameraHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraHandler.swift; sourceTree = "<group>"; };
+		664F7CE4292AB197002795D9 /* LiveCameraUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraUIView.swift; sourceTree = "<group>"; };
 		664F7CE6292BBDB8002795D9 /* UIImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtention.swift; sourceTree = "<group>"; };
 		664F7CED292C105F002795D9 /* CMSampleBufferExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMSampleBufferExtention.swift; sourceTree = "<group>"; };
 		664F7CEF292D0863002795D9 /* RGBColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBColor.swift; sourceTree = "<group>"; };
@@ -63,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		660980C72932728000F1914F /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				664F7CE1292A8568002795D9 /* LiveCameraHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 		664F7CAF292A63C2002795D9 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +113,7 @@
 		664F7CD0292A64B1002795D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				660980C72932728000F1914F /* Handlers */,
 				664F7CFB292E53EA002795D9 /* Helpers */,
 				664F7CDE292A74FB002795D9 /* DominantColor.swift */,
 				664F7CEF292D0863002795D9 /* RGBColor.swift */,
@@ -151,7 +160,7 @@
 		664F7CE3292AB17B002795D9 /* UIViews */ = {
 			isa = PBXGroup;
 			children = (
-				664F7CE4292AB197002795D9 /* LiveStreamCameraUIView.swift */,
+				664F7CE4292AB197002795D9 /* LiveCameraUIView.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -204,7 +213,6 @@
 		664F7CFB292E53EA002795D9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				664F7CE1292A8568002795D9 /* LiveStreamCamera.swift */,
 				664F7CFC292E5749002795D9 /* DominantColorsHelper.swift */,
 			);
 			path = Helpers;
@@ -284,7 +292,7 @@
 			files = (
 				664F7CC0292A63C2002795D9 /* MainViewController.swift in Sources */,
 				664F7CDF292A74FB002795D9 /* DominantColor.swift in Sources */,
-				664F7CE5292AB197002795D9 /* LiveStreamCameraUIView.swift in Sources */,
+				664F7CE5292AB197002795D9 /* LiveCameraUIView.swift in Sources */,
 				664F7CD8292A6BE6002795D9 /* DominantColorCell.swift in Sources */,
 				664F7CF2292D0B76002795D9 /* FloatExtention.swift in Sources */,
 				664F7CFF292F9A07002795D9 /* UInit8Extention.swift in Sources */,
@@ -295,7 +303,7 @@
 				664F7CF0292D0863002795D9 /* RGBColor.swift in Sources */,
 				664F7D01292F9ACF002795D9 /* UIColorExtention.swift in Sources */,
 				664F7CEE292C105F002795D9 /* CMSampleBufferExtention.swift in Sources */,
-				664F7CE2292A8568002795D9 /* LiveStreamCamera.swift in Sources */,
+				664F7CE2292A8568002795D9 /* LiveCameraHandler.swift in Sources */,
 				664F7CBE292A63C2002795D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

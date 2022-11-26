@@ -8,7 +8,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet weak var liveStreamCameraUIView: LiveStreamCameraUIView!
+    @IBOutlet weak var liveStreamCameraUIView: LiveCameraUIView!
     private var mostDominantColorsList = [DominantColor]()
     
     
@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
     
     
     func reloadFiveMostDominantColorsFromCameraToTableView() {
-        LiveStreamCamera.shared.getMostFiveDominantColorsInImage { [weak self] fiveMostDominantColor in
+        LiveCameraHandler.shared.getMostFiveDominantColorsInImage { [weak self] fiveMostDominantColor in
             guard let self = self else {return }
             self.mostDominantColorsList = fiveMostDominantColor
             DispatchQueue.main.async {
@@ -49,10 +49,10 @@ extension MainViewController {
     
     func configureLiveStreamCamera() {
         
-        liveStreamCameraUIView.videoPreviewLayer.session = LiveStreamCamera.shared.captureSesstion
+        liveStreamCameraUIView.videoPreviewLayer.session = LiveCameraHandler.shared.captureSesstion
         liveStreamCameraUIView.videoPreviewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         DispatchQueue.global(qos: .userInitiated).async {
-            LiveStreamCamera.shared.captureSesstion.startRunning()
+            LiveCameraHandler.shared.captureSesstion.startRunning()
         }
         
     }
