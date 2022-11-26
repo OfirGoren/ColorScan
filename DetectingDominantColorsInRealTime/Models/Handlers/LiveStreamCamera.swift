@@ -12,11 +12,11 @@ import Foundation
 import AVFoundation
 import UIKit
 
-class LiveCameraHandler:NSObject {
+class LiveStreamCamera:NSObject {
     
     typealias MostDominantColorsClousre = (([DominantColor])->Void)
     
-    static let shared = LiveCameraHandler()
+    static let shared = LiveStreamCamera()
     
     let captureSesstion = AVCaptureSession()
     private let dataOutput = AVCaptureVideoDataOutput()
@@ -87,7 +87,7 @@ class LiveCameraHandler:NSObject {
 }
 
 // MARK: SampleBufferDelegate methods
-extension LiveCameraHandler:AVCaptureVideoDataOutputSampleBufferDelegate {
+extension LiveStreamCamera:AVCaptureVideoDataOutputSampleBufferDelegate {
     
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
