@@ -1,6 +1,6 @@
-# DetectingDominantColorsInRealTime
+# ColorScan
 
-DetectingDominantColorsInRealTime provides the five most dominant colors with percentage coverage in real time.
+ColorScan provides the five most dominant colors with percentage coverage in real time.
 
 
 ## Gifs:
